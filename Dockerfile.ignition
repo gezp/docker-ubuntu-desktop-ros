@@ -1,6 +1,6 @@
 ARG ROS_DISTRO=galactic
 ARG IGNITION_VERSION=edifice
-From gezp/docker-ubuntu-desktop-ros:$ROS_DISTRO
+From gezp/ubuntu-desktop-ros:$ROS_DISTRO
 
 ## Install Gazebo
 RUN apt-get update  && \

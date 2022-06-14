@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=gezp/docker-ubuntu-desktop:20.04
+ARG BASE_IMAGE=gezp/ubuntu-desktop:20.04
 ARG ROS_DISTRO=galactic
 From $BASE_IMAGE
 
