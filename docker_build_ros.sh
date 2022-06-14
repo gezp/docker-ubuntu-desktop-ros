@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# usage: ./docker_ros_build.sh galactic
+# usage: ./docker_build_ros.sh galactic
 
 if [[("$1" == "galactic")]];then
     BASE_IMAGE=gezp/docker-ubuntu-desktop:20.04
@@ -8,6 +8,9 @@ if [[("$1" == "galactic")]];then
 elif [[("$1" == "humble")]];then
     BASE_IMAGE=gezp/docker-ubuntu-desktop:22.04
     ROS_DISTRO=humble
+elif [[("$1" == "rolling")]];then
+    BASE_IMAGE=gezp/docker-ubuntu-desktop:22.04
+    ROS_DISTRO=rolling
 else
     echo "Invaild Tag: $1"
     exit -1
