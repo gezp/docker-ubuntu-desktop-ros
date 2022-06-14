@@ -1,0 +1,11 @@
+ARG ROS_DISTRO=galactic
+ARG GAZEBO_VERSION=edifice
+From gezp/docker-ubuntu-desktop-ros:$ROS_DISTRO
+
+## Install Gazebo
+RUN apt-get update  && \
+    wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg && \
+    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null && \
+    apt-get update && \
+    apt-get install ignition-$GAZEBO_VERSION && \
+    rm -rf /var/lib/apt/lists/* 
