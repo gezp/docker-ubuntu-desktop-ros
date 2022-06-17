@@ -18,3 +18,6 @@ RUN apt-get update && \
 USER $USER
 RUN rosdep update
 RUN echo "source /opt/ros/$ROS_DISTRO/setup.bash" >> ~/.bashrc
+
+## Change back to root
+USER root
