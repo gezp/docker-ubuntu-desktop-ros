@@ -15,4 +15,4 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # overlay scripts
-COPY config_user.sh /docker_config/config_user.sh
+COPY startup.sh /docker_config/startup.sh
