@@ -3,6 +3,8 @@ From $BASE_IMAGE
 
 ARG ROS_DISTRO=galactic
 
+ENV ROS_DISTRO=$ROS_DISTRO
+
 ## Install ROS2
 RUN apt-get update && \
     # add source
