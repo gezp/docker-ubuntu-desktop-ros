@@ -15,7 +15,7 @@ fi
 
 # build ubuntu-desktop-ros image
 DOCKER_TAG=${1}
-docker build . --file Dockerfile.ignition \
+docker build . --file Dockerfile \
              --build-arg ROS_DISTRO=${ROS_DISTRO} \
              --build-arg IGNITION_VERSION=${IGNITION_VERSION} \
              --tag ubuntu-desktop-ros:${DOCKER_TAG}

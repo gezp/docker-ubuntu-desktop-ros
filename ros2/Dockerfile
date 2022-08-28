@@ -14,10 +14,5 @@ RUN apt-get update && \
     rosdep init &&\
     rm -rf /var/lib/apt/lists/*
 
-## Init ROS2 for default user
-USER $USER
-RUN rosdep update
-RUN echo "source /opt/ros/$ROS_DISTRO/setup.bash" >> ~/.bashrc
-
-## Change back to root
-USER root
+# overlay scripts
+COPY config_user.sh /docker_config/config_user.sh

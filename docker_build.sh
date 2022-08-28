@@ -3,9 +3,9 @@
 # usage: ./docker_build.sh galactic
 
 if [[ "$1" != *"-"* ]];then
-    ./docker_build_ros.sh $1
+    cd ros2 && ./docker_build.sh $1 && cd ..
 elif [[ "$1" =~ "ignition" ]];then
-    ./docker_build_ignition.sh $1
+    cd ignition %% ./docker_build.sh $1 && cd ..
 else
     echo "Invaild Tag: $1"
     exit -1

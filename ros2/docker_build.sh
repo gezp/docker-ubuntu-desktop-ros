@@ -25,7 +25,7 @@ fi
 
 # build ubuntu-desktop-ros image
 DOCKER_TAG=${1}
-docker build . --file Dockerfile.ros \
+docker build . --file Dockerfile \
              --build-arg BASE_IMAGE=${BASE_IMAGE} \
              --build-arg ROS_DISTRO=${ROS_DISTRO} \
              --tag ubuntu-desktop-ros:${DOCKER_TAG}
