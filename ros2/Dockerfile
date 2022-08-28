@@ -13,7 +13,8 @@ RUN apt-get update && \
     apt-get update && \
     apt-get install -y ros-$ROS_DISTRO-desktop && \
     apt-get install -y python3-colcon-common-extensions python3-rosdep python3-vcstool && \
-    rosdep init &&\
+    rosdep init && \
+    rosdep update && \
     rm -rf /var/lib/apt/lists/*
 
 # overlay scripts

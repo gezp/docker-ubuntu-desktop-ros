@@ -12,11 +12,12 @@ if [ ! -f "/docker_config/init_flag" ]; then
     mkdir /home/$USER/.config
     cp -r /docker_config/xfce4 /home/$USER/.config
     chown -R $UID:$GID /home/$USER/.config
+    # copy ros cache
+    cp -r /root/.ros /home/$USER/.ros
+    chown -R $UID:$GID /home/$USER/.ros
     # update user's .bashrc
     echo "export PATH=/usr/NX/scripts/vgl:\$PATH" >> /home/$USER/.bashrc
     echo "source /opt/ros/$ROS_DISTRO/setup.bash" >> /home/$USER/.bashrc
-    # ros user config 
-    su $USER -c "rosdep update"
     # custom init
     bash /docker_config/init.sh
     # update init flag
