@@ -28,9 +28,9 @@ jobs:
       run: bash docker_build.sh ${{env.DOCKER_TAG}}
     - name: Push Docker Image to Docker Hub
       run: |
-        docker tag ubuntu-desktop:${{env.DOCKER_TAG}} gezp/ubuntu-desktop:${{env.DOCKER_TAG}}
-        docker push gezp/ubuntu-desktop:${{env.DOCKER_TAG}}
+        docker tag ubuntu-desktop-ros:${{env.DOCKER_TAG}} gezp/ubuntu-desktop-ros:${{env.DOCKER_TAG}}
+        docker push gezp/ubuntu-desktop-ros:${{env.DOCKER_TAG}}
     - name: Push Docker Image to Aliyun Docker Registry (hongkong)
       run: |
-        docker tag ubuntu-desktop:${{env.DOCKER_TAG}} registry.cn-hongkong.aliyuncs.com/gezp/ubuntu-desktop:${{env.DOCKER_TAG}}
-        docker push registry.cn-hongkong.aliyuncs.com/gezp/ubuntu-desktop:${{env.DOCKER_TAG}}
+        docker tag ubuntu-desktop-ros:${{env.DOCKER_TAG}} registry.cn-hongkong.aliyuncs.com/gezp/ubuntu-desktop-ros:${{env.DOCKER_TAG}}
+        docker push registry.cn-hongkong.aliyuncs.com/gezp/ubuntu-desktop-ros:${{env.DOCKER_TAG}}
