@@ -1,8 +1,7 @@
 ARG BASE_IMAGE=gezp/ubuntu-desktop:20.04
 From $BASE_IMAGE
 
-ARG ROS_DISTRO=galactic
-
+ARG ROS_DISTRO=rolling
 ENV ROS_DISTRO=$ROS_DISTRO
 
 ## Install ROS2
@@ -17,5 +16,5 @@ RUN apt-get update && \
     rosdep update && \
     rm -rf /var/lib/apt/lists/*
 
-# overlay scripts
-COPY startup.sh /docker_config/startup.sh
+# add script env_init.sh 
+COPY env_init.sh /docker_config/env_init.sh
