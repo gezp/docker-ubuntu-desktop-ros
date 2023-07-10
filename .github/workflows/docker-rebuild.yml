@@ -1,0 +1,56 @@
+name: Docker Rebuild CI
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 6 * * *'
+jobs:
+  rebuild:
+    strategy:
+      matrix:
+        include:
+          - BASE_IMAGE: gezp/ubuntu-desktop:20.04
+            DOCKER_TAG: galactic
+          - BASE_IMAGE: gezp/ubuntu-desktop:22.04
+            DOCKER_TAG: humble
+          - BASE_IMAGE: gezp/ubuntu-desktop:22.04
+            DOCKER_TAG: rolling
+          - BASE_IMAGE: gezp/ubuntu-desktop-ros:humble
+            DOCKER_TAG: humble-gazebo-fortress
+          - BASE_IMAGE: gezp/ubuntu-desktop-ros:humble
+            DOCKER_TAG: humble-gazebo-garden
+    env:
+      DOCKER_TAG: ${{ matrix.DOCKER_TAG }}
+  runs-on: ubuntu-latest
+  steps:
+    - name: Docker Image Update Checker
+      id: check
+      uses: lucacome/docker-image-update-checker@v1.2.1
+      with:
+        base-image: ${{ matrix.BASE_IMAGE }}
+        image: ${{ matrix.DOCKER_TAG }}
+    - name: Cancel Action if needn't Update
+      if: steps.check.outputs.needs-updating == 'false'
+      uses: andymckay/cancel-action@0.3
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Login to Docker Hub
+      uses: docker/login-action@v1
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+    - name: Login to Aliyun Docker Registry
+      uses: docker/login-action@v1
+      with:
+        registry: registry.cn-hongkong.aliyuncs.com
+        username: ${{ secrets.ALIYUN_USERNAME }}
+        password: ${{ secrets.ALIYUN_PASSWORD }}
+    - name: Build Docker Image
+      run: bash docker_build.sh ${{env.DOCKER_TAG}}
+    - name: Push Docker Image to Docker Hub
+      run: |
+        docker tag ubuntu-desktop-ros:${{env.DOCKER_TAG}} gezp/ubuntu-desktop-ros:${{env.DOCKER_TAG}}
+        docker push gezp/ubuntu-desktop-ros:${{env.DOCKER_TAG}}
+    - name: Push Docker Image to Aliyun Docker Registry (hongkong)
+      run: |
+        docker tag ubuntu-desktop-ros:${{env.DOCKER_TAG}} registry.cn-hongkong.aliyuncs.com/gezp/ubuntu-desktop-ros:${{env.DOCKER_TAG}}
+        docker push registry.cn-hongkong.aliyuncs.com/gezp/ubuntu-desktop-ros:${{env.DOCKER_TAG}}
