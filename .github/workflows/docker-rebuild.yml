@@ -43,7 +43,7 @@ jobs:
             trigger=true
           fi
           if  [ "${{github.event_name}}" == 'workflow_dispatch' ] && \
-              [ "${{github.event.inputs.rebuild-options}}" == 'force-gazebo' ]
+              [ "${{github.event.inputs.rebuild-options}}" == 'force-all' ]
           then
             trigger=true
           fi
