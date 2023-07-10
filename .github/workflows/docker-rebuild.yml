@@ -38,11 +38,12 @@ jobs:
         id: rebuild_checker
         run: |
           trigger=false
-          if  [ "${{steps.update_checker.outputs.needs-updating}}" == 'true' ] 
+          if  [ "${{steps.update_checker.outputs.needs-updating}}" == 'true' ]
+          then
             trigger=true
           fi
           if  [ "${{github.event_name}}" == 'workflow_dispatch' ] && \
-              [ "${{github.event.inputs.rebuild-options}}" == 'force-all' ]
+              [ "${{github.event.inputs.rebuild-options}}" == 'force-gazebo' ]
           then
             trigger=true
           fi
