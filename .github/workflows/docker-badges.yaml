@@ -17,3 +17,5 @@ jobs:
             python3 .github/workflows/update_badge.py
       - name: Push to Repo
         uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: update badge config automatically
