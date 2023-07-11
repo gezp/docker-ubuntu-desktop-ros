@@ -6,42 +6,14 @@ on:
     - cron: '0 8 * * *'
 jobs:
   update-badges:
-    strategy:
-      matrix:
-        include:
-          - DOCKER_TAG: galactic
-            GIST_ID: 505445d3e1f7804389c35d83d7fb79b0
-          - DOCKER_TAG: humble
-            GIST_ID: 2289def3cc388efb66063f28fe23f22f
-          - DOCKER_TAG: rolling
-            GIST_ID: a43c58857f704baf654536a100c245bb
-          - DOCKER_TAG: humble-gazebo-fortress
-            GIST_ID: 8ba0a7c9711571c945b0f846476108a5
-          - DOCKER_TAG: humble-gazebo-garden
-            GIST_ID: 898558f753f1fed9cd010afd13d6f639
-          - DOCKER_TAG: galactic-ignition-edifice
-            GIST_ID: 2c8f8d1218443ca9c1f8fb56489ac267
-          - DOCKER_TAG: humble-ignition-fortress
-            GIST_ID: 1662e3ffde7ae21ae33f57f55d75a356
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - name: Fetch metadata from DockerHub
-        id: metadata
-        uses: theo-brown/fetch-dockerhub-metadata@v1
-        with:
-          repository: gezp/ubuntu-desktop-ros
-          tag: ${{ matrix.DOCKER_TAG }}
-      - name: Get Build Date of Docker Image
-        id: docker_info
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Update Badge for Docker
         run: |
-            build_date=$(echo '${{ steps.metadata.outputs.created }}' | cut -d T -f 1)
-            echo "build_date=${build_date}" >> $GITHUB_OUTPUT
-      - name: Update Badge for Docker Build Date 
-        uses: schneegans/dynamic-badges-action@v1.6.0
-        with:
-          auth: ${{ secrets.GIST_SECRET }}
-          gistID: ${{ matrix.GIST_ID }}
-          filename: docker-badge-ros-${{matrix.DOCKER_TAG}}.json
-          label: build date
-          message: ${{ steps.docker_info.outputs.build_date }}
-          color: blue
+            python3 .github/workflows/update_badge.py
+      - name: Push to Repo
+        uses: stefanzweifel/git-auto-commit-action@v4
