@@ -7,16 +7,16 @@ ROS2 Desktop
 
 | tag      |                          build date                          |                             size                             |
 | :------- | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| galactic | ![badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/gezp/505445d3e1f7804389c35d83d7fb79b0/raw/docker-badge-ros-galactic.json) | ![](https://img.shields.io/docker/image-size/gezp/ubuntu-desktop-ros/galactic) |
-| humble   | ![badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/gezp/2289def3cc388efb66063f28fe23f22f/raw/docker-badge-ros-humble.json) | ![](https://img.shields.io/docker/image-size/gezp/ubuntu-desktop-ros/humble) |
-| rolling  | ![badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/gezp/a43c58857f704baf654536a100c245bb/raw/docker-badge-ros-rolling.json) | ![](https://img.shields.io/docker/image-size/gezp/ubuntu-desktop-ros/rolling) |
+| galactic | ![](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/gezp/docker-ubuntu-desktop-ros/main/doc/badges/build-date-galactic.json) | ![](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/gezp/docker-ubuntu-desktop-ros/main/doc/badges/image-size-galactic.json) |
+| humble   | ![](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/gezp/docker-ubuntu-desktop-ros/main/doc/badges/build-date-humble.json) | ![](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/gezp/docker-ubuntu-desktop-ros/main/doc/badges/image-size-humble.json) |
+| rolling  | ![](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/gezp/docker-ubuntu-desktop-ros/main/doc/badges/build-date-rolling.json) | ![](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/gezp/docker-ubuntu-desktop-ros/main/doc/badges/image-size-rolling.json) |
 
 ROS2 Desktop + Gazebo
 
 | tag                    |                          build date                          |                             size                             |
 | :--------------------- | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| humble-gazebo-fortress | ![badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/gezp/8ba0a7c9711571c945b0f846476108a5/raw/docker-badge-ros-humble-gazebo-fortress.json) | ![](https://img.shields.io/docker/image-size/gezp/ubuntu-desktop-ros/humble-gazebo-fortress) |
-| humble-gazebo-garden   | ![badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/gezp/898558f753f1fed9cd010afd13d6f639/raw/docker-badge-ros-humble-gazebo-garden.json) | ![](https://img.shields.io/docker/image-size/gezp/ubuntu-desktop-ros/humble-gazebo-garden) |
+| humble-gazebo-fortress | ![](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/gezp/docker-ubuntu-desktop-ros/main/doc/badges/build-date-humble-gazebo-fortress.json) | ![](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/gezp/docker-ubuntu-desktop-ros/main/doc/badges/image-size-humble-gazebo-fortress.json) |
+| humble-gazebo-garden   | ![](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/gezp/docker-ubuntu-desktop-ros/main/doc/badges/build-date-humble-gazebo-garden.json) | ![](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/gezp/docker-ubuntu-desktop-ros/main/doc/badges/image-size-humble-gazebo-garden.json) |
 
 ## Deprecated Tags
 
@@ -24,6 +24,6 @@ ROS2 Desktop + Ignition
 
 | tag                       |                          build date                          |                             size                             |
 | :------------------------ | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| galactic-ignition-edifice | ![badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/gezp/2c8f8d1218443ca9c1f8fb56489ac267/raw/docker-badge-ros-galactic-ignition-edifice.json) | ![](https://img.shields.io/docker/image-size/gezp/ubuntu-desktop-ros/galactic-ignition-edifice) |
-| humble-ignition-fortress  | ![badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/gezp/1662e3ffde7ae21ae33f57f55d75a356/raw/docker-badge-ros-humble-ignition-fortress.json) | ![](https://img.shields.io/docker/image-size/gezp/ubuntu-desktop-ros/humble-ignition-fortress) |
+| galactic-ignition-edifice | ![](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/gezp/docker-ubuntu-desktop-ros/main/doc/badges/build-date-galactic-ignition-edifice.json) | ![](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/gezp/docker-ubuntu-desktop-ros/main/doc/badges/image-size-galactic-ignition-edifice.json) |
+| humble-ignition-fortress  | ![](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/gezp/docker-ubuntu-desktop-ros/main/doc/badges/build-date-humble-ignition-fortress.json) | ![](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/gezp/docker-ubuntu-desktop-ros/main/doc/badges/image-size-humble-ignition-fortress.json) |
 
