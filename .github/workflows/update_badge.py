@@ -39,9 +39,10 @@ if __name__ == "__main__":
     tags = [
         "galactic",
         "humble",
+        "jazzy",
         "rolling",
         "humble-gazebo-fortress",
-        "humble-gazebo-garden",
+        "jazzy-gazebo-harmonic",
         "galactic-ignition-edifice",
         "humble-ignition-fortress",
     ]

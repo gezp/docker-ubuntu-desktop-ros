@@ -5,9 +5,9 @@
 if [[("$1" == "humble-gazebo-fortress")]];then
     ROS_DISTRO=humble
     GZ_VERSION=fortress
-elif [[("$1" == "humble-gazebo-garden")]];then
-    ROS_DISTRO=humble
-    GZ_VERSION=garden
+elif [[("$1" == "jazzy-gazebo-harmonic")]];then
+    ROS_DISTRO=jazzy
+    GZ_VERSION=harmonic
 else
     echo "Invaild Tag: $1"
     exit -1
