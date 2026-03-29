@@ -37,7 +37,6 @@ def formatSize(size):
 
 if __name__ == "__main__":
     tags = [
-        "galactic",
         "humble",
         "jazzy",
         "rolling",

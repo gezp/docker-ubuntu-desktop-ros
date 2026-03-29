@@ -1,5 +1,5 @@
 #!/bin/bash
-gazebo_tags=(humble-gazebo-fortress humble-gazebo-garden)
+gazebo_tags=(humble-gazebo-fortress jazzy-gazebo-harmonic)
 
 for value in ${gazebo_tags[@]}
 do

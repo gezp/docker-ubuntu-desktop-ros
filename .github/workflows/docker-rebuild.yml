@@ -18,8 +18,6 @@ jobs:
     strategy:
       matrix:
         include:
-          - BASE_IMAGE: gezp/ubuntu-desktop:20.04
-            DOCKER_TAG: galactic
           - BASE_IMAGE: gezp/ubuntu-desktop:22.04
             DOCKER_TAG: humble
           - BASE_IMAGE: gezp/ubuntu-desktop:24.04
