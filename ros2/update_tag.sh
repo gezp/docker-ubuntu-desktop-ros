@@ -1,5 +1,5 @@
 #!/bin/bash
-tags=(rolling galactic humble)
+tags=(humble jazzy rolling)
 
 for value in ${tags[@]}
 do

@@ -18,11 +18,11 @@ jobs:
     strategy:
       matrix:
         include:
-          - BASE_IMAGE: gezp/ubuntu-desktop:20.04
-            DOCKER_TAG: galactic
           - BASE_IMAGE: gezp/ubuntu-desktop:22.04
             DOCKER_TAG: humble
-          - BASE_IMAGE: gezp/ubuntu-desktop:22.04
+          - BASE_IMAGE: gezp/ubuntu-desktop:24.04
+            DOCKER_TAG: jazzy
+          - BASE_IMAGE: gezp/ubuntu-desktop:24.04
             DOCKER_TAG: rolling
     env:
       DOCKER_TAG: ${{ matrix.DOCKER_TAG }}
@@ -86,8 +86,8 @@ jobs:
         include:
           - BASE_IMAGE: gezp/ubuntu-desktop-ros:humble
             DOCKER_TAG: humble-gazebo-fortress
-          - BASE_IMAGE: gezp/ubuntu-desktop-ros:humble
-            DOCKER_TAG: humble-gazebo-garden
+          - BASE_IMAGE: gezp/ubuntu-desktop-ros:jazzy
+            DOCKER_TAG: jazzy-gazebo-harmonic
     env:
       DOCKER_TAG: ${{ matrix.DOCKER_TAG }}
     runs-on: ubuntu-latest

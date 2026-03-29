@@ -37,13 +37,11 @@ def formatSize(size):
 
 if __name__ == "__main__":
     tags = [
-        "galactic",
         "humble",
+        "jazzy",
         "rolling",
         "humble-gazebo-fortress",
-        "humble-gazebo-garden",
-        "galactic-ignition-edifice",
-        "humble-ignition-fortress",
+        "jazzy-gazebo-harmonic",
     ]
     for tag in tags:
         metadata = get_metadata("gezp/ubuntu-desktop-ros", tag)

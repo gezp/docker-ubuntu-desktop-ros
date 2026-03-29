@@ -1,15 +1,15 @@
 #!/bin/bash
 
-# usage: ./docker_build_ros.sh galactic
+# usage: ./docker_build_ros.sh humble
 
-if [[("$1" == "galactic")]];then
-    BASE_IMAGE=gezp/ubuntu-desktop:20.04
-    ROS_DISTRO=galactic
-elif [[("$1" == "humble")]];then
+if [[("$1" == "humble")]];then
     BASE_IMAGE=gezp/ubuntu-desktop:22.04
     ROS_DISTRO=humble
+elif [[("$1" == "jazzy")]];then
+    BASE_IMAGE=gezp/ubuntu-desktop:24.04
+    ROS_DISTRO=jazzy
 elif [[("$1" == "rolling")]];then
-    BASE_IMAGE=gezp/ubuntu-desktop:22.04
+    BASE_IMAGE=gezp/ubuntu-desktop:24.04
     ROS_DISTRO=rolling
 else
     echo "Invaild Tag: $1"
