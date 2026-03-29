@@ -27,10 +27,3 @@ ROS2 Desktop + Gazebo
 | :--------------------- | :----------------------------------------------------------: | :----------------------------------------------------------: |
 | humble-gazebo-garden   | ![](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/gezp/docker-ubuntu-desktop-ros/main/doc/badges/build-date-humble-gazebo-garden.json) | ![](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/gezp/docker-ubuntu-desktop-ros/main/doc/badges/image-size-humble-gazebo-garden.json) |
 
-ROS2 Desktop + Ignition
-
-| tag                       |                          build date                          |                             size                             |
-| :------------------------ | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| galactic-ignition-edifice | ![](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/gezp/docker-ubuntu-desktop-ros/main/doc/badges/build-date-galactic-ignition-edifice.json) | ![](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/gezp/docker-ubuntu-desktop-ros/main/doc/badges/image-size-galactic-ignition-edifice.json) |
-| humble-ignition-fortress  | ![](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/gezp/docker-ubuntu-desktop-ros/main/doc/badges/build-date-humble-ignition-fortress.json) | ![](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/gezp/docker-ubuntu-desktop-ros/main/doc/badges/image-size-humble-ignition-fortress.json) |
-

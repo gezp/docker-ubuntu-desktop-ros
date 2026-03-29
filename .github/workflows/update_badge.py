@@ -43,8 +43,6 @@ if __name__ == "__main__":
         "rolling",
         "humble-gazebo-fortress",
         "jazzy-gazebo-harmonic",
-        "galactic-ignition-edifice",
-        "humble-ignition-fortress",
     ]
     for tag in tags:
         metadata = get_metadata("gezp/ubuntu-desktop-ros", tag)
